@@ -10,4 +10,4 @@
 
 ### [github](http://www.github.com)
 
-[Link](https://github.com/johnmargas/CIM540/tree/master/week1)
+[Link](https://github.com/johnmargas/CIM540/tree/master/week1/readme.md)
