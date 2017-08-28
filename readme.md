@@ -1,15 +1,15 @@
 # CIM540
 
-## This is smaller than above.
+## this is a smaller header than above
 
-### This is even smaller.
+### this is an even smaller header
 
-###### This might be the smallest.
+###### this might be the smallest header
 
-[Link to google](http://www.google.com)
+[this is a link to google](http://www.google.com)
 
-### [github](http://www.github.com)
+### [this is a link to github in a header](http://www.github.com)
 
-[Link](https://github.com/johnmargas/CIM540/tree/master/week1/readme.md)
+[this is a link](https://github.com/johnmargas/CIM540/tree/master/week1/readme.md)
 
-![Penguin Image](http://honesttopaws.com/wp-content/uploads/sites/5/2016/02/3-penguins.jpg)
+![penguin image](http://honesttopaws.com/wp-content/uploads/sites/5/2016/02/3-penguins.jpg)
