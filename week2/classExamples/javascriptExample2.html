@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>My App</title>
+
+    <style>
+        /* Enter CSS below */
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>my app</h1>
+
+    <p><i>description goes here</i></p>
+    
+    <button type="button" onclick="sayHello('john')">check console</button>
+
+    <script>
+        
+        var goodbye = "goodbye ";
+        
+        function printMessage(){
+            console.log("print");
+        }
+        
+        function sayHello(name){
+            var message = "hello " + name;
+            
+            console.log(message);
+        }
+        
+        function sayGoodbye(name){
+            var message = goodbye + name;
+            
+            console.log(message);
+        }
+        
+        function add(num1, num2){
+            var sum = num1 + num2;
+            
+            console.log(sum);
+        }
+        
+        function add2(num1, num2){
+            var sum = num1 + num2;
+            
+            return sum;
+        }
+        
+        printMessage();
+        
+        sayHello("john");
+        
+        sayGoodbye("john");
+        
+        add(1, 1);
+        
+        console.log(add2(1, 1));
+        
+        var num1 = add2(1, 1);
+        var num2 = add2(1, 1);
+        
+        console.log(add2(num1, num2));
+        
+    </script>
+
+</body>
+
+</html>
