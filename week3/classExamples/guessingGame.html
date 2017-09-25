@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My App</title>
+
+    <style>
+        /* Enter CSS below */
+    </style>
+
+ </head>
+
+
+<body>
+
+    <h1>Guessing Game</h1>
+
+    <p><i>choose a number between 1 and 10</i></p>
+    
+    <form>
+    
+        <label for="guessInput">enter a number: </label>
+        <input type="text" name="guessInput" id="guessInput">
+        <button type="button" id="guessButton">guess</button>
+    
+    </form>
+
+    <div id="guessOutput"></div>
+    
+    <script>
+        
+        function checkAnswer(){
+            
+            var guess = document.getElementById("guessInput").value;
+            
+            var output = document.getElementById("guessOutput");
+            
+            var answer = 5;
+            
+            var message;
+            
+            if(guess == answer)
+                message = "You're right!"
+            else
+                message = "Try again!"
+            
+            output.innerHTML = message;
+            
+        }
+        
+        var guessButton = document.getElementById("guessButton");
+        
+        guessButton.addEventListener("click", checkAnswer);
+        
+    </script>
+
+</body>
+
+</html>

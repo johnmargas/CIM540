@@ -14,9 +14,9 @@
 
 <body>
 
-    <h1>Homework 2</h1>
+    <h1>Homework</h1>
 
-    <p><i>cm. to in. conversion</i></p>
+    <p><i>US Customary System to Metric System converter</i></p>
     
     <form>
     
@@ -57,17 +57,38 @@
         
         <label>centimeters</label>
         <input id="cm" type="number" oninput="cmToIn(this.value)">
+        <!--
+        <input type="number" name="cm" id="cm">
+        <button type="button" id="convert">convert</button>
+        <div id="conversion"></div>
+        -->
         
         <br>
-        
-        <label>inches</label>
-        <label id="outputIn"></label>
     
     </form>
+    
+    <label>inches</label>
+    <div id="outputIn"></div>
 
     <script>
         
         function cmToIn(cm) {
+            
+            /*
+            convert(){
+            
+            }
+            
+            var getButton = document.getElementById("convert");
+            
+            getButton.addEventListener("click", convert);
+            
+            var message = ""
+            
+            var outputText = document.getElementById("conversion");
+            
+            outputText.innerHTML = message;
+            */
             
             document.getElementById("outputIn").innerHTML= cm * 0.393701;
             
