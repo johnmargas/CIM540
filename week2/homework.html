@@ -38,12 +38,38 @@
         
         <input type="radio" name="gender" value="other" id="other">
         <label for="other">other</label>
+        
+        <br><br>
+        
+        <label for="cars">Cars</label>
+        <select name="cars" id="cars">
+        
+            <option value="volvo">volvo</option>
+            <option value="saab">volvo</option>
+            <option value="fiat">volvo</option>
+            <option value="audi">volvo</option>
+            
+        </select>
+        
+        <br><br>
+        
+        <label>centimeters</label>
+        <input id="cm" type="number" oninput="cmToIn(this.value)">
+        
+        <br>
+        
+        <label>inches:</label>
+        <span id="outputIn"></span>
     
     </form>
 
     <script>
-
         
+        function cmToIn(cm) {
+            
+            document.getElementById("outputIn").innerHTML=cm*0.393701;
+            
+        }
         
     </script>
 
