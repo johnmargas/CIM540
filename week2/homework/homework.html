@@ -55,44 +55,40 @@
         <br><br>
         -->
         
-        <label>centimeters</label>
-        <input id="cm" type="number" oninput="cmToIn(this.value)">
-        <!--
         <input type="number" name="cm" id="cm">
+        
+        <select name="US" id="US">
+            <option value="inches">inches</option>
+            <option value="feet">feet</option>
+            <option value="yards">yards</option>
+            <option value="miles">miles</option>
+        </select>
+        
+         <label>to</label>
+        
+        <select name="metric" id="metric">
+            <option value="centimeters">centimeters</option>
+            <option value="meters">meters</option>
+            <option value="kilometers">kilometers</option>
+        </select>
+        
         <button type="button" id="convert">convert</button>
-        <div id="conversion"></div>
-        -->
         
         <br>
     
     </form>
     
-    <label>inches</label>
-    <div id="outputIn"></div>
+    <div id="conversion"></div>
 
     <script>
         
-        function cmToIn(cm) {
-            
-            /*
-            convert(){
-            
-            }
-            
-            var getButton = document.getElementById("convert");
-            
-            getButton.addEventListener("click", convert);
-            
-            var message = ""
-            
-            var outputText = document.getElementById("conversion");
-            
-            outputText.innerHTML = message;
-            */
-            
-            document.getElementById("outputIn").innerHTML= cm * 0.393701;
+        function convert() {
             
         }
+        
+        document.getElementById("convert").addEventListener("click", convert);
+            
+        document.getElementById("conversion").innerHTML = conversion;
         
     </script>
 
