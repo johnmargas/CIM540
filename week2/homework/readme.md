@@ -2,13 +2,11 @@
 
 This program is a US Customary System to Metric System converter, in particular inches, feet, yards, and miles to centimeters, meters, and kilometers.
 
-There will be a text-box for the number, a drop-down menu to choose the US Customary unit, a drop-down menu to choose the Metric System unit you want to convert to, and a submit button.
+## How It Works
 
-### How It Works
+My plan was simple, instead of using numerous conditional statements, I decided to convert every US Customary unit to inches and then simply convert that to the desired Metric System unit.
 
-My plan was simple, instead of using numerous conditionals, I decided to convert every US Customary unit to inches and then simply convert that to the desired Metric System unit.
-
-### Step-By-Step
+## Step-By-Step
 
 <b>HTML</b>
 <ol>
@@ -22,7 +20,7 @@ My plan was simple, instead of using numerous conditionals, I decided to convert
 <ol>
     <li>create a convert function</li>
     <li>use "addEventListener" to grab the submit button</li>
-    <li>in the convert function, use "getElementById" grab all the information required:
+    <li>in the convert function, use "getElementById" to grab all the information required:
         <ul>
             <li>input</li>
             <li>US Customary System unit</li>
@@ -32,6 +30,6 @@ My plan was simple, instead of using numerous conditionals, I decided to convert
     </li>
     <li>create a conversion unit to be used later</li>
     <li>using a series of "if" statements, convert the US Customary System units to inches</li>
-    <li>again, using a series of "if" statements, convert the now converted US Customary System unit to Metric System units</li>
+    <li>again, using a series of "if" statements, convert the now converted US Customary System unit to the Metric System units</li>
     <li>use "innerHTML" to output the answer onto the screen</li>
 </ol>
