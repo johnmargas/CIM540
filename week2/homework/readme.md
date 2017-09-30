@@ -6,7 +6,7 @@ This program is a US Customary System to Metric System converter, in particular 
 
 ### The Plan
 
-My plan was simple, instead of using numerous conditional statements, I decided to convert every US Customary unit to inches and then simply convert that to the desired Metric System unit.
+Instead of using numerous conditional statements, I decided to convert every US Customary unit to inches and then simply convert that to the desired Metric System unit.
 
 ### Step-By-Step
 
