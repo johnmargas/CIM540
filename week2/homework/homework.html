@@ -55,7 +55,7 @@
         <br><br>
         -->
         
-        <input type="number" name="cm" id="cm">
+        <input type="number" name="input" id="input">
         
         <select name="US" id="US">
             <option value="inches">inches</option>
@@ -74,21 +74,52 @@
         
         <button type="button" id="convert">convert</button>
         
-        <br>
+        <br><br>
     
     </form>
     
-    <div id="conversion"></div>
+    <div id="output"></div>
 
     <script>
         
         function convert() {
             
+            var input = document.getElementById("input").value;
+            
+            var US = document.getElementById("US").value;
+            
+            var metric = document.getElementById("metric").value;
+            
+            var output = document.getElementById("output");
+            
+            var conversion; 
+
+            if(US == 'feet')
+                input = input * 12;
+            else if(US == 'yards')
+                input = input * 36;
+            else if(US == 'miles')
+                input = input * 63360;
+            
+            if(metric == 'centimeters')
+                conversion = input * 2.54;
+            else if(metric == 'meters')
+                conversion = input * 0.0254;
+            else if(metric == 'kilometers')
+                conversion = input * 0.0000254;
+            
+            if(US == 'feet')
+                input = input / 12;
+            if(US == 'yards')
+                input = input / 36;
+            if(US == 'miles')
+                input = input / 63360;
+            
+            output.innerHTML = input + " " + US + " is " + conversion + " " + metric + "."
+        
         }
         
         document.getElementById("convert").addEventListener("click", convert);
-            
-        document.getElementById("conversion").innerHTML = conversion;
         
     </script>
 
