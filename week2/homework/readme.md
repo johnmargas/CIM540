@@ -33,5 +33,6 @@ Instead of using numerous conditional statements, I decided to convert every US 
     <li>create a conversion unit to be used later</li>
     <li>using a series of "if" statements, convert the US Customary System units to inches</li>
     <li>again, using a series of "if" statements, convert the now converted US Customary System unit to the Metric System units</li>
+    <li>using another series of "if" statements, convert all the US Customary System units back to the desired unit for use in the next step</li>
     <li>use "innerHTML" to output the answer onto the screen</li>
 </ol>
