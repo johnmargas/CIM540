@@ -1,12 +1,14 @@
 # Code Plan
 
+### About
+
 This program is a US Customary System to Metric System converter, in particular inches, feet, yards, and miles to centimeters, meters, and kilometers.
 
-## How It Works
+### The Plan
 
 My plan was simple, instead of using numerous conditional statements, I decided to convert every US Customary unit to inches and then simply convert that to the desired Metric System unit.
 
-## Step-By-Step
+### Step-By-Step
 
 <b>HTML</b>
 <ol>
