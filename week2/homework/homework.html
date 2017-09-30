@@ -51,7 +51,7 @@
             
             var input = document.getElementById("input").value;
             
-            var US = document.getElementById("US").value;
+            var us = document.getElementById("US").value;
             
             var metric = document.getElementById("metric").value;
             
@@ -59,11 +59,11 @@
             
             var conversion; 
 
-            if(US == 'feet')
+            if(us == 'feet')
                 input = input * 12;
-            else if(US == 'yards')
+            else if(us == 'yards')
                 input = input * 36;
-            else if(US == 'miles')
+            else if(us == 'miles')
                 input = input * 63360;
             
             if(metric == 'centimeters')
@@ -73,14 +73,14 @@
             else if(metric == 'kilometers')
                 conversion = input * 0.0000254;
             
-            if(US == 'feet')
+            if(us == 'feet')
                 input = input / 12;
-            if(US == 'yards')
+            if(us == 'yards')
                 input = input / 36;
-            if(US == 'miles')
+            if(us == 'miles')
                 input = input / 63360;
             
-            output.innerHTML = input + " " + US + " is " + conversion + " " + metric + "."
+            output.innerHTML = input + " " + us + " is " + conversion + " " + metric + "."
         
         }
         
