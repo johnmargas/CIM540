@@ -16,6 +16,7 @@ Instead of using numerous conditional statements, I decided to convert every US 
     <li>create a drop-down menu for the user to select both the US Customary System unit they want to convert from and the Metric System Unit they want to convert to</li>
     <li>create a button for the user to click to submit</li>
     <li>create a "div" for the eventual output</li>
+    <li>create an absolute link to an image</li>
 </ol>
 
 <b>JavaScript</b>
