@@ -5,7 +5,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(400, 400);
+    noCanvas();
     
     rm = new RiMarkov(5);
     for(i = 0; i < load.length; i++)
