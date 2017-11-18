@@ -6,17 +6,10 @@ function preload() {
 
 function setup() {
     noCanvas();
-    
+
     rm = new RiMarkov(5);
-    for(i = 0; i < load.length; i++)
+    for (i = 0; i < load.length; i++)
         rm.loadText(load[i]);
-    console.log(rm.size());
-//    for(i = 0; i <= rm.size(); i++)
-//        tokens = rm.generateTokens(i);
-//    
-//    console.log(tokens);
-//    
-//    wordArray = RiTa.tokenize(sentence);
-//    
-//    console.log(wordArray);
+
+    console.log(load);
 }
