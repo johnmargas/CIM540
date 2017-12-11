@@ -41,16 +41,21 @@ function scene() {
             sceneBoundary[i][1]);
         sceneContent.push(sceneLine);
     }
+
+    console.log('There are ' + sceneContent.length + ' scenes. ' + 
+        intScene.length + ' of them are interior and ' + 
+        extScene.length + ' of them are exterior.');
 }
 
 function character() {
     var wordArray = [];
     for(var i = 0; i < sceneContent.length; i++) {
         for(var j = 1; j < sceneContent[i].length; j++) {
-            var isAllCaps = /\b[A-Z]{2,}\b/.test(sceneContent[i][j]);
-            var isContinued = sceneContent[i][j].includes('CONTINUED');
+            var isAllCaps = /\b[A-Z]{2,}\b/.test(sceneContent[i][j]),
+            isContinued = sceneContent[i][j].includes('CONTINUED'),
+            isMontage = sceneContent[i][j].includes('MONTAGE');
 
-            if(isAllCaps && !isContinued) {
+            if(isAllCaps && !isContinued && !isMontage) {
                 wordArray.push([i, j, RiTa.tokenize(sceneContent[i][j])]);
             }
         }
@@ -70,7 +75,8 @@ function character() {
         if(counter == wordArray[i][2].length && !characterArray.includes(characterLine)) {
             characterArray.push(characterLine);
         }
-        
         counter = 0;
     }
+
+    console.log('There are ' + characterArray.length + ' characters: \n' + characterArray);
 }
