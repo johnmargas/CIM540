@@ -70,6 +70,7 @@ function character() {
         if(counter == wordArray[i][2].length && !characterArray.includes(characterLine)) {
             characterArray.push(characterLine);
         }
+        
         counter = 0;
     }
 }
