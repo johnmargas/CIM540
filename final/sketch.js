@@ -34,17 +34,13 @@ function scene() {
         if(i == sceneBoundary.length - 1) {
             sceneBoundary[i][1] = screenplay.length - 1;
         } else {
-            sceneBoundary[i][1] = sceneBoundary[i + 1][0] - 1;            
+            sceneBoundary[i][1] = sceneBoundary[i + 1][0];            
         }
 
         var sceneLine = screenplay.slice(sceneBoundary[i][0], 
             sceneBoundary[i][1]);
         sceneContent.push(sceneLine);
     }
-
-    console.log('There are ' + sceneContent.length + ' scenes. ' + 
-        intScene.length + ' of them are interior and ' + 
-        extScene.length + ' of them are exterior.');
 }
 
 function character() {
@@ -53,9 +49,10 @@ function character() {
         for(var j = 1; j < sceneContent[i].length; j++) {
             var isAllCaps = /\b[A-Z]{2,}\b/.test(sceneContent[i][j]),
             isContinued = sceneContent[i][j].includes('CONTINUED'),
-            isMontage = sceneContent[i][j].includes('MONTAGE');
+            isMontage = sceneContent[i][j].includes('MONTAGE'),
+            isFadeToBlack =  sceneContent[i][j].includes('FADE TO BLACK');
 
-            if(isAllCaps && !isContinued && !isMontage) {
+            if(isAllCaps && !isContinued && !isMontage && !isFadeToBlack) {
                 wordArray.push([i, j, RiTa.tokenize(sceneContent[i][j])]);
             }
         }
@@ -64,9 +61,11 @@ function character() {
     var counter = 0;
     for(var i = 0; i < wordArray.length; i++) {
         for(var j = 0; j < wordArray[i][2].length; j++) {
-            var isAllCaps = /\b[A-Z]{2,}\b/.test(wordArray[i][2][j]);
+            var isAllCaps = /\b[A-Z]{2,}\b/.test(wordArray[i][2][j]),
+            isNumber = /\d/.test(wordArray[i][2][j]),
+            isPound = /[#]/.test(wordArray[i][2][j]);
             
-            if(isAllCaps) {
+            if(isAllCaps || isNumber || isPound) {
                 counter++;
             }
         }
@@ -78,5 +77,14 @@ function character() {
         counter = 0;
     }
 
-    console.log('There are ' + characterArray.length + ' characters: \n' + characterArray);
+    for(var i = 0; i < sceneContent.length; i++) {
+        for(var j = 0; j < sceneContent[i].length; j++) {
+            for(var k = 0; k < characterArray.length; k++) {
+                if(sceneContent[i][j].includes('-' + characterArray[k])) {
+                    sceneContent[i][j] = sceneContent[i][j].replace(characterArray[k], '');
+                    sceneContent[i].splice(j + 1, 0, characterArray[k]);
+                }
+            }
+        }
+    }
 }
